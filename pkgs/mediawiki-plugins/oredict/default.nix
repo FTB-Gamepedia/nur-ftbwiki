@@ -13,9 +13,9 @@ stdenv.mkDerivation rec {
 
   postInstall = ''
 
-  mkdir -p $out/var/lib/mediawiki/extensions/${pname}
+  mkdir -p $out/share/mediawiki/extensions/${pname}
 
-  cp -r $src/* $out/var/lib/mediawiki/extensions/${pname}
+  cp -r $src/* $out/share/mediawiki/extensions/${pname}
   '';
 
   meta = with lib; {
