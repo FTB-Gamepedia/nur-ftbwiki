@@ -14,7 +14,6 @@
   modules = import ./modules; # NixOS modules
   overlays = import ./overlays; # nixpkgs overlays
 
-  example-package = pkgs.callPackage ./pkgs/example-package { };
   mediawiki-tilesheets = pkgs.callPackage ./pkgs/mediawiki-plugins/tilesheets { };
   mediawiki-oredict = pkgs.callPackage ./pkgs/mediawiki-plugins/oredict { };
   # some-qt5-package = pkgs.libsForQt5.callPackage ./pkgs/some-qt5-package { };
