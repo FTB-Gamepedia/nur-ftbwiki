@@ -1,4 +1,4 @@
-{ lib, fetchFromGitHub, rustPlatform, pkg-config, openssl }:
+{ lib, fetchFromGitHub, rustPlatform, pkg-config, openssl, optipng }:
 
 rustPlatform.buildRustPackage rec {
   pname = "ftb-rs";
@@ -19,6 +19,10 @@ rustPlatform.buildRustPackage rec {
   buildInputs = [ openssl ];
 
   nativeBuildInputs = [ pkg-config ];
+
+  patchPhase = ''
+    substituteInPlace src/tilesheets.rs --replace 'Command::new("optipng")' 'Command::new("${optipng}/bin/optipng")'
+  '';
 
   meta = with lib; {
     description = "A tool to upload tilesheets to the Official FTB Wiki";
