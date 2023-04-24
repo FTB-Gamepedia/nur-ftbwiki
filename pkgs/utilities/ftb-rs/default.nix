@@ -14,6 +14,7 @@ rustPlatform.buildRustPackage rec {
   cargoLock = {
     lockFile = ./Cargo.lock;
     allowBuiltinFetchGit = true;
+	# TODO: find better workaround for this
   };
 
   buildInputs = [ openssl ];
@@ -31,5 +32,6 @@ rustPlatform.buildRustPackage rec {
     license = licenses.bsd3;
     maintainers = [ maintainers.tomodachi94 ];
 	mainProgram = "ftb";
+	broken = true; # This package is broken in 'restricted mode' due to cargoLock.allowBultinFetchGit being set to true
   };
 }
