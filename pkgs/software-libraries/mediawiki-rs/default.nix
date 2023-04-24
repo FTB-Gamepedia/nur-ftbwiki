@@ -29,6 +29,5 @@ rustPlatform.buildRustPackage rec {
     description = "A library for interfacing with the MediaWiki APIs from Rust";
     homepage = "https://github.com/FTB-Gamepedia/mediawiki-rs";
     license = with licenses; [ mit asl20 ];
-    maintainers = [ maintainers.tomodachi94 ];
   };
 }

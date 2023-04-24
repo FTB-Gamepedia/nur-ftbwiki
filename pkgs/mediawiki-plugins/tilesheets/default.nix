@@ -23,6 +23,5 @@ stdenv.mkDerivation rec {
     homepage = "https://github.com/FTB-Gamepedia/Tilesheets";
     changelog = "https://github.com/FTB-Gamepedia/Tilesheets/blob/master/CHANGELOG.md";
     license = licenses.mit;
-    maintainers = with maintainers; [ tomodachi94 ];
   };
 }

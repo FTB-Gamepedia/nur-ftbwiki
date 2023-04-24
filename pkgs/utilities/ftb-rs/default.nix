@@ -30,7 +30,6 @@ rustPlatform.buildRustPackage rec {
     homepage =
       "https://ftb.fandom.com/wiki/Feed_The_Beast_Wiki:Tilesheet_update_guide";
     license = licenses.bsd3;
-    maintainers = [ maintainers.tomodachi94 ];
 	mainProgram = "ftb";
 	broken = true; # This package is broken in 'restricted mode' due to cargoLock.allowBultinFetchGit being set to true
   };
